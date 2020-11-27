@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "BaskasininKarisiKumarbaz",
+    "database": "TunahanTest",
+    "host": "database-2.cjplx6c41lii.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "admin",
+    "password": "BaskasininKarisiKumarbaz",
+    "database": "TunahanTest",
+    "host": "database-2.cjplx6c41lii.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "admin",
+    "password": "BaskasininKarisiKumarbaz",
+    "database": "TunahanTest",
+    "host": "database-2.cjplx6c41lii.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
