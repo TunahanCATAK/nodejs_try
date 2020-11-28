@@ -2,6 +2,7 @@ const UserMapper = require('./UserMapper');
 
 //TODO: It needs to be done with DI.
 const DepUserModel = require("../models/User");
+const User = require('../models/User');
 
 class UserRepository {
 
@@ -9,10 +10,18 @@ class UserRepository {
         
     }
 
+    //TODO: it's a workaround solution 
+    _mapper(user) {
+      const id = user.dataValues.id;
+      const name =user.dataValues.name;
+      const surname = user.dataValues.surname;
+      return new User({ id, name, surname });
+    }
+
     async getAll(...args) {
       const users = await DepUserModel.findAll(...args);
       console.log(users);
-      return users.map(UserMapper.toEntity);
+      return users.map(this._mapper);
     }
 
 

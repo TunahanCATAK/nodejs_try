@@ -5,6 +5,7 @@ class UsersController {
     constructor(){}
 
     async getAllUsers(req, res) { 
+        console.error(">> GET / request");
         let userRep = new UserRepository();
         let users = null;
         try {
